@@ -35,6 +35,7 @@ The initial deployment (build and application startup) will take some time (up t
 
     remote: BUILD SUCCESSFUL
     remote: Starting DIY cartridge
+    Started DemoApplication in 15.284 seconds (JVM running for 17.402)
 
 You can now browse to: `http://<app-name>.rhcloud.com/manage/health` and you should see:
 
