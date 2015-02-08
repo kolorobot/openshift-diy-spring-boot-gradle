@@ -11,7 +11,7 @@ public class DemoApplication {
 
     @RequestMapping(value = {"", "/"})
     public String index() {
-        return "Running...";
+        return "Running ...";
     }
 
     public static void main(String[] args) {
