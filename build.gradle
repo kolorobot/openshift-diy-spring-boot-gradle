@@ -1,19 +1,19 @@
 buildscript {
     ext {
         springBootVersion = '1.2.1.RELEASE'
-    }	
+    }
     repositories {
         mavenCentral()
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
     }
-	configurations {
+    configurations {
         compile.exclude module: "spring-boot-starter-tomcat"
     }
 }
 apply plugin: 'java'
-apply plugin: 'spring-boot' 
+apply plugin: 'spring-boot'
 
 jar {
     baseName = 'demo'
@@ -28,7 +28,7 @@ repositories {
 
 
 dependencies {
-	compile("org.springframework.boot:spring-boot-starter-undertow")
+    compile("org.springframework.boot:spring-boot-starter-undertow")
     compile("org.springframework.boot:spring-boot-starter-web")
     compile("org.springframework.boot:spring-boot-starter-actuator")
     testCompile("org.springframework.boot:spring-boot-starter-test")
