@@ -44,3 +44,7 @@ You can now browse to: `http://<app-name>.rhcloud.com/manage/health` and you sho
 	{
 		"status": "UP",
 	}
+
+# Under the hood
+
+See: http://blog.codeleak.pl/2015/02/openshift-diy-build-spring-boot.html
