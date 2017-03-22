@@ -2,14 +2,6 @@
 
 set -x
 
-if [ ! -d $OPENSHIFT_DATA_DIR/jdk1.8.0_65 ]
-        then
-                cd $OPENSHIFT_DATA_DIR				
-                wget --no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u65-b17/jdk-8u65-linux-x64.tar.gz
-                tar xvf *.tar.gz
-                rm -f *.tar.gz
-fi
-
 if [ ! -d $OPENSHIFT_DATA_DIR/gradle-2.7 ]
         then
                 cd $OPENSHIFT_DATA_DIR
@@ -34,7 +26,7 @@ cd $OPENSHIFT_REPO_DIR
 export GRADLE_USER_HOME=$OPENSHIFT_DATA_DIR/gradle
 export GRADLE_HOME=$OPENSHIFT_DATA_DIR/gradle-2.7
 export GRADLE_OPTS="-Xms384m -Xmx412m"
-export JAVA_HOME=$OPENSHIFT_DATA_DIR/jdk1.8.0_65
+export JAVA_HOME=/etc/alternatives/java_sdk_1.8.0
 export PATH=$JAVA_HOME/bin:$GRADLE_HOME/bin:$PATH
 
 gradle bootRepackage
